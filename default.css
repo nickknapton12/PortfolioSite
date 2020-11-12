@@ -1,0 +1,91 @@
+:root{
+    --HeaderColor:white;
+
+}
+
+html, body{
+    padding: 0;
+    margin:0;
+    background-color:white;
+}
+
+h1{
+    font-size: 80px;
+    font-family: 'Russo One', sans-serif;
+    color:var(--HeaderColor);
+    margin-top:10px;
+    margin-bottom:10px;
+}
+h2{
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--HeaderColor);
+    margin:0;
+}
+h3{
+    font-size: 25px;
+    font-family: 'Courgette', cursive;
+    color:white;
+    margin:0;
+}
+
+.s1{
+    background-image: linear-gradient(20deg, rgb(22, 21, 21), rgb(0, 0, 109), black);
+    overflow: auto;
+}
+
+.MainContainer{
+    width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "Intro Theme";
+}
+
+.IntroWrapper{
+    grid-area: Intro;
+}
+
+.intro{
+    padding: 25% 0% 20% 30%; 
+}
+
+.ThemeWrapper{
+    grid-area: Theme;
+}
+
+#ThemeChoiceWrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.ThemeChoice{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #d4af37;
+    margin: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ThemeChoice:hover{
+    height: 60px;
+    width: 60px;
+}
+
+#PurpleMode{
+background-image: linear-gradient(20deg, rgb(22, 21, 21), rgb(44, 1, 145), black);
+}
+#RedMode{
+    background-image: linear-gradient(20deg, rgb(22, 21, 21), rgb(78, 5, 5), black);
+}
+#BlueMode{
+    background-image: linear-gradient(20deg, rgb(22, 21, 21), rgb(0, 0, 109), black);
+}       
+
+@media screen and (max-width: 1301px){
+    .MainContainer{
+        width: 95%;
+    }
+}
