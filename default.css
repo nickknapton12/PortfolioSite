@@ -1,91 +1,421 @@
 :root{
-    --HeaderColor:white;
-
+    --MainColor:black;
+    --BackgroundColor: white;
 }
 
 html, body{
+    height: 100%;
     padding: 0;
     margin:0;
-    background-color:white;
 }
 
 h1{
-    font-size: 80px;
-    font-family: 'Russo One', sans-serif;
-    color:var(--HeaderColor);
-    margin-top:10px;
-    margin-bottom:10px;
+    font-size: 140px;
+    font-family: 'Bebas Neue', cursive;
+    color:var(--MainColor);
+    margin-top: 0;
+    margin-bottom:0;
 }
 h2{
-    font-size: 30px;
-    font-family: 'Roboto Mono', monospace;
-    color: var(--HeaderColor);
+    font-weight: 10;
+    font-size: 40px;
+    color: var(--MainColor);
     margin:0;
 }
 h3{
     font-size: 25px;
-    font-family: 'Courgette', cursive;
-    color:white;
+    font-family: 'Bebas Neue', cursive;
+    color: var(--MainColor);
     margin:0;
+}
+h4{
+    font-size: 60px;
+    opacity: 0.75;
+    font-family: 'Bebas Neue', cursive;
+    color: var(--MainColor);
+    margin: 0 0 0 0;
+    text-align: center;
+}
+h5{
+    font-size: 120px;
+    font-family: 'Bebas Neue', cursive;
+    color:white;
+    margin-top: 5%;
+    margin-bottom:5%;
+    margin: 5% 0 5% 3%
+}
+
+p{
+    font-size:16px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .s1{
-    background-image: linear-gradient(20deg, rgb(22, 21, 21), rgb(0, 0, 109), black);
+    background-image:url(photos/whistlerbackground.jpg);
+    height: auto;
+    position: relative;
+    opacity: 0.7;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
     overflow: auto;
+    border: 40px solid var(--BackgroundColor);
 }
 
-.MainContainer{
-    width: 1300px;
-    margin: 0 auto;
+.s2{
+    height: auto;
+    position: relative;
+    width: auto;
+    background-color:var(--BackgroundColor);
+}
+
+.s3{
+    background-image:url(photos/lake.jpg);
+    height: auto;
+    position: relative;
+    opacity: 0.7;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    overflow: auto;
+    border: 40px solid var(--BackgroundColor);
+}
+
+.s4{
+    height: auto;
+    padding-bottom: 60px;
+    position: relative;
+    width: auto;
+    background-color: var(--BackgroundColor);
+}
+
+
+.Intro{
+    display: block;
+    position: relative;
+    margin-top:16%;
+    margin-bottom:16%;
+    text-align: center;
+}
+
+#headertext{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.ResumeButton{
+    display: block;
+    margin: 20px 44% 0 44%;
+    width: 12%;
+    height: 35px;
+    background-color: rgb(169, 224, 255);
+    border-radius: 20px;
+    border: 4px solid var(--MainColor);
+    text-decoration: none;
+
+    -webkit-box-shadow: -1px 1px 24px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 24px -6px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 24px -6px rgba(0,0,0,0.75);   
+}
+
+.ResumeButton:hover{
+    margin: 18.5px 43.75% 0 43.75%;
+    width: 12.5%;
+    height: 38px;
+}
+
+.ProjectSectionWrapper{
+    justify-self: center;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "Intro Theme";
+    max-height: 20%;
+    margin-bottom: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 500px 50px;
+    grid-template-areas: "one two three"
+                         "icon icon icon";
 }
 
-.IntroWrapper{
-    grid-area: Intro;
+.ProjectWrapper{
+    height: 90%;
+    width: 60%;
+    padding-bottom: 0;
+    background-color: white;
+    border-radius: 8px;
+    border:3px solid rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    align-self:end;
+    justify-self:center ;
+
+    -webkit-box-shadow: 0px -2px 41px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 41px -7px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 41px -7px rgba(0,0,0,0.75);
+
+    display: grid;
+    grid-template-rows: 9fr 8fr;
+    grid-template-areas: "Thumbnail"
+                         "Description"
 }
 
-.intro{
-    padding: 25% 0% 20% 30%; 
+.ProjectWrapper:hover{
+    
+
+    -webkit-box-shadow: 0px -2px 48px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 48px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 48px 3px rgba(0,0,0,0.75);
 }
 
-.ThemeWrapper{
-    grid-area: Theme;
+.Thumbnail{
+    grid-area: "Thumbnail";
 }
 
-#ThemeChoiceWrapper{
-    display: flex;
-    justify-content: center;
+#ThumbnailOne{
+    border-radius: 8px 8px 0 0 ;
+    background-image: url(photos/ParkingSim.png);
+    position: relative;
+    background-position: center;
+    background-size:cover;
+} 
+#ThumbnailTwo{
+    border-radius: 8px 8px 0 0 ;
+    background-image: url(photos/Sudokocover.JPG);
+    position: relative;
+    background-position: center;
+    background-size:cover;
+}
+#ThumbnailThree{
+    border-radius: 8px 8px 0 0 ;
+    background-image: url("#");
+    position: relative;
+    background-position: center;
+    background-size:cover;
 }
 
-.ThemeChoice{
+.ProjectDescription{
+    grid-area:"Description";
+    padding: 0 2px 0 2px;
+    text-align: center;
+    max-width: 100%;
+}
+
+#ProjectTitle{
+    position: relative;
+    padding-top:8px;
+    font-size:30px;
+}
+
+.GitHubIcon{
+    grid-area:"icon";
     height: 50px;
     width: 50px;
+    justify-self: center;
     border-radius: 50%;
-    border: 2px solid #d4af37;
-    margin: 10px;
+    background-image: url(photos/GitHubIcon.png);
+    position: relative;
+    background-position: center;
+    background-size:cover;
+}
+
+
+#ProjectOne{
+    grid-area:"one";
+}
+#ProjectTwo{
+    grid-area:"two";
+}
+#ProjectThree{
+    grid-area:"three";
+}
+
+.SkillsWrapper{
+    height: auto;
+    width: 99%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "skillsheader Cplus C HTML Java CSS";
+
+    justify-items: center;
     align-items: center;
-    cursor: pointer;
 }
 
-.ThemeChoice:hover{
-    height: 60px;
-    width: 60px;
+#SkillsHeader{
+    grid-area:"skillsheader" ;
+    margin: 200px 0 200px 0;
 }
 
-#PurpleMode{
-background-image: linear-gradient(20deg, rgb(22, 21, 21), rgb(44, 1, 145), black);
+.SkillIcon{
+    height: 180px;
+    width: auto;
 }
-#RedMode{
-    background-image: linear-gradient(20deg, rgb(22, 21, 21), rgb(78, 5, 5), black);
-}
-#BlueMode{
-    background-image: linear-gradient(20deg, rgb(22, 21, 21), rgb(0, 0, 109), black);
-}       
 
-@media screen and (max-width: 1301px){
-    .MainContainer{
-        width: 95%;
+#CplusIcon{
+    grid-area:"Cplus"
+}
+#CIcon{
+    grid-area:"C"
+}
+#JavaIcon{
+    grid-area:"Java"
+}
+#HTMLIcon{
+    grid-area:"HTML"
+}
+#CSSIcon{
+    grid-area:"CSS"
+}
+
+.WindowWrapper{
+    height: auto;
+    width: auto;
+    display: grid;
+}
+
+.Window{
+   height: auto;
+   width: 70%;
+   margin-top: 20px;
+   justify-self: center;
+   background-color: white; 
+   border-radius: 10px 10px 0 0;
+   border: 1px solid #c1c1c1;
+
+   display: grid;
+   grid-template-rows: auto;
+   grid-template-areas: "Nav""Screen";
+
+   -webkit-box-shadow: 0px -2px 31px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 31px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 31px -6px rgba(0,0,0,0.75);
+}
+
+.NavBar{
+    border-radius: 10px 10px 0 0;
+    background-color: #eaeaea;
+    border: 1px solid #c1c1c1;
+    grid-area:"Nav";
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.DotsWrapper{
+    padding: 10px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.BrowserDot{
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    margin:5px;
+    background-color: coral;
+}
+
+#RedDot{
+    background-color: #FC6058;
+}
+#YellowDot{
+    background-color: #FEC02F;
+}
+#GreenDot{
+    background-color: #2ACA3E;
+}
+
+.ContactButton{
+    margin: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color:#17a2b8;
+    font-family: 'Goldman', cursive;
+}
+
+.ScreenSpaceWrapper{
+    grid-area: "Screen";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"profile media";
+}
+
+.ProfileArea{
+    margin: 20% 0 0 0;
+    grid-area:"profile"
+}
+
+#profilepic{
+    margin: 0 35% 0 35%;
+    height: auto;
+    width: 30%;
+    border: 2px solid #c1c1c1;
+    align-self: center;
+}
+
+#profilesummary{
+    padding: 0 10% 0 10%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.MediaLinks{
+    grid-area:"media"
+}
+
+#windowheader{
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    padding-top:2%;
+    
+}
+
+#githubimage{
+    width: 70%;
+    margin:2% 15% 0 15%;
+    height: auto;
+    align-self:center;
+
+    -webkit-box-shadow: 0px -2px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 10px 0px rgba(0,0,0,0.75);
+}
+
+#githubimage:hover{
+    margin:1.2% 14% 0 14%;
+    width:72%;
+
+    -webkit-box-shadow: 0px -2px 14px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 14px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 14px 5px rgba(0,0,0,0.75);
+}
+
+#Linkedinimage{
+    width: 70%;
+    margin:2% 15% 5% 15%;
+    height: auto;
+    align-self:center;
+
+    -webkit-box-shadow: 0px -2px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 10px 0px rgba(0,0,0,0.75);
+}
+
+#Linkedinimage:hover{
+    margin:1.2% 14% 4.5% 14%;
+    width:72%;
+    -webkit-box-shadow: 0px -2px 14px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 14px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 14px 5px rgba(0,0,0,0.75);
+}
+
+
+@media screen and (max-width: 1000px){
+    h3{
+        font-size: 17px;
+        font-family: 'Courgette', cursive;
+        position: relative;
+        color: var(--MainColor);
+        margin:0;
     }
 }
