@@ -1,7 +1,7 @@
 # This is my portfolio web site!
 
 I built this website to showcase some of my projects and give a way to contact me! This is currently still a work in progress as I have been building it while learning HTML, CSS 
-and JavaScript, while studying software engineering at university.
+and JavaScript, and while studying software engineering at university.
 
 # What I learned and plan to learn for this project:
 
